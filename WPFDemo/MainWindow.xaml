@@ -28,10 +28,11 @@
             <RowDefinition Height= "20"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Column="1" Grid.Row="1" Text="WPF Super Demo"
-                   FontSize="36" FontWeight="Bold" Foreground="BurlyWood"/>
+                  Grid.ColumnSpan="4" FontSize="36" FontWeight="Bold" Foreground="BurlyWood" Margin="10,0,0,10" HorizontalAlignment="center"/> <!-- margin arguments - left, top, right, bottom-->
         <TextBlock Grid.Column = "1" Grid.Row="2" FontWeight="bold"
-                 Text="First Name"/>
-        <TextBox x:Name="firstNameText" Grid.Column="2" Grid.Row ="2"/>
+                 Text="First Name:" Margin="10,10,10,10" Height="24" VerticalAlignment="center"/>
+        <TextBox x:Name="firstNameText" Grid.Column="2" Grid.Row ="2" Grid.ColumnSpan="3" Margin="10,10,10,10" Width="auto"/>
+        <Button x:Name="submitButton" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4" Content="Run Me" Margin="20,20,20,20" Click="submitButton_Click" DragOver="submitButton_DragOver"/>
     </Grid>
 
     
